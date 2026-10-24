@@ -29,6 +29,7 @@ export function PromptOutput({ prompt, negativePrompt, onChange, onInfo, copyBlo
   }
   return <section className="output-section" aria-labelledby="output-title">
     <div className="section-heading"><h2 id="output-title"><FileText size={17} />Prompt 输出</h2><span className="live-label"><i />实时生成</span></div>
+    <p className="field-hint output-subtitle">用想象和技术，与你所爱的那个TA见面</p>
     <div className="prompt-box"><div className="prompt-box-heading"><span><Sparkles size={15} />正向提示词</span><span>POSITIVE</span></div><textarea aria-label="正向 Prompt 输出" readOnly value={prompt} placeholder="选择标签后，英文 Prompt 会在这里实时生成…" rows={5} spellCheck={false} /><div className="prompt-box-footer"><span>{prompt.length} 字符</span><span>英文 · 逗号分隔</span></div></div>
     {copyBlocked && <p className="weight-error" role="alert">启用的标签含未适配控制符或个人定义无法读取。上方仅预览其余内容，请先恢复定义，或停用、移除问题标签后复制。</p>}
     <button className="primary-button" disabled={!prompt || copyBlocked} onClick={() => void handleCopy(prompt, 'positive')}>{copied === 'positive' ? <Check size={17} /> : <Copy size={17} />}{copied === 'positive' ? '已复制' : '复制正向 Prompt'}</button>
