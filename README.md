@@ -3,7 +3,7 @@
 
 用中文寻找绘画标签，点击组合成英文 Prompt，再复制到自己的生图工具。NovelAI Prompt Studio 是面向 NovelAI 用户的可视化绘画提示词编辑器，提供内置双语词库、逐标签权重、收藏组合和个人标签库，支持电脑与手机浏览器，无需登录或 API 密钥。
 
-每一个标签，都是灵感的起点
+每一个标签，都是灵感的起点。
 
 **在线使用：[打开 NovelAI Prompt Studio](https://hanaumi-haruka.github.io/NovelAI-Prompt-Studio/)**。支持电脑和手机浏览器，无需安装开发工具。
 
