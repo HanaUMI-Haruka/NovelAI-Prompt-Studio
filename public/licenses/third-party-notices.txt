@@ -1,0 +1,126 @@
+AI Prompt Studio 开源与第三方声明
+
+应用代码使用MIT，见根目录LICENSE；网站副本为licenses/project-license.txt。
+当前全部运行依赖的版本及完整许可由锁文件生成，见public/licenses/dependencies.txt，
+网站路径为licenses/dependencies.txt。以下历史依赖许可不表示当前仍在使用该依赖。
+第三方数据保持各自许可，尤其作品媒介派生数据库使用ODbL-1.0，不能因应用MIT标记而改为MIT。
+完整数据说明见docs/DATA_SOURCES.md；网站同时提供catalog/work-media-review.json及数据许可全文。
+
+Danbooru 中英文标签快照来源与许可
+
+拖拽排序依赖（2026-10-24新增）
+@dnd-kit/core 6.3.1、@dnd-kit/sortable 10.0.0、@dnd-kit/utilities 3.2.2、
+@dnd-kit/accessibility 3.1.1：MIT，Copyright (c) 2021, Claudéric Demers。
+来源：https://github.com/clauderic/dnd-kit
+完整许可随网站保存在 public/licenses/dnd-kit.txt（网页路径 /licenses/dnd-kit.txt）。
+tslib 2.8.1：0BSD，Copyright (c) Microsoft Corporation。
+来源：https://github.com/Microsoft/tslib
+完整许可随网站保存在 public/licenses/tslib.txt（网页路径 /licenses/tslib.txt）。
+这些文件也会包含在dist生产输出中。
+
+来源：https://github.com/ffdkj/ffdkj-Danbooru_Tag-Chinese-English-Translation-Table
+固定提交：8fb4eb79225828bd7d401a5c0a2ad03d79c8a4e1
+获取时间（UTC）：2026-10-23T09:09:57.5292103Z
+来源条数：334348；本地导入：334348；跳过：0
+
+英文标签与原始类别来自上游 Danbooru 快照；中文由社区机器翻译和校对，不是 Danbooru 官方翻译，可能存在误译。通用细类由本工具规则整理，不代表 Danbooru 官方分类。未下载图片或 wiki 长文。无在线翻译或生图 API。
+
+以下保留上游 MIT 许可全文：
+
+MIT License
+
+Copyright (c) 2026 ffdkj <2624696826@qq.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+作品媒介分类补充（2026-10-24）
+
+1. Wikidata 结构化数据：CC0
+   标签映射属性：https://www.wikidata.org/wiki/Property:P13236
+   许可说明：https://www.wikidata.org/wiki/Wikidata:Licensing
+   仅提取精确 Danbooru 标签与明确的 P31 作品类型，不复制维基百科正文。
+
+2. anime-offline-database by manami-project
+   https://github.com/manami-project/anime-offline-database
+   固定发行版：2026-27；数据 lastUpdate：2026-07-04。
+   Contains information from anime-offline-database by manami-project,
+   made available under the Open Database License 1.0 (ODbL-1.0).
+   Individual database contents are licensed under DbCL-1.0.
+   完整许可：docs/licenses/anime-offline-database.txt
+   网页内许可副本：/catalog/anime-offline-database-license.txt
+   派生的作品媒介映射数据库（src/data/workMediaReviewed.json）按 ODbL-1.0
+   提供；可直接获取的完整派生映射、逐条证据和来源见
+   /catalog/work-media-review.json（public/catalog/work-media-review.json）。
+   原始中文标签快照与应用源代码仍分别遵循各自许可。
+   本次只处理作品标题、类型和资料页链接；未下载或使用封面、图片或视频。
+
+3. 具体作品白名单的事实参考链接在 src/data/workMediaCurated.ts 及上述
+   核对记录中逐组列出。分类属于本工具的本地整理，不是 Danbooru 官方分类。
+
+
+Historical offline transliteration licenses
+The following dependencies were removed from the application on 2026-10-24.
+Licenses are retained for the archived source backup only; they are not runtime dependencies.
+
+pinyin-pro 3.29.5 - https://github.com/zh-lx/pinyin-pro
+MIT License
+
+Copyright (c) 2022-present zh-lx
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+wanakana 5.3.1 - https://github.com/WaniKani/WanaKana
+The MIT License (MIT)
+
+Copyright (c) 2013 WaniKani Community Github
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

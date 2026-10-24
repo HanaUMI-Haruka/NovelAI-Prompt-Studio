@@ -1,0 +1,48 @@
+.draft-history { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.draft-history > div { display: flex; gap: 7px; }
+.draft-history button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 33px; padding: 7px 10px; border: 1px solid var(--border-strong); border-radius: 7px; color: var(--accent-ink); background: var(--raised); font-size: 11px; }
+.draft-history button:hover:not(:disabled) { background: var(--accent-soft); border-color: var(--accent); }
+.draft-history > span { color: var(--muted); font-size: 10px; text-align: right; }
+.backup-dialog { width: min(680px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); overflow-y: auto; }
+.backup-dialog .backup-intro { margin: 16px 0 22px; }
+.backup-dialog h3, .backup-dialog h4 { display: flex; align-items: center; gap: 7px; margin: 0 0 12px; color: var(--text); font-size: 14px; font-weight: 600; }
+.backup-dialog h4 { font-size: 12px; overflow-wrap: anywhere; }
+.backup-dialog h3 svg, .backup-dialog h4 svg { color: var(--accent-ink); flex-shrink: 0; }
+.backup-export { padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.backup-dialog .secondary-button, .backup-dialog .primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; width: auto; padding: 10px 14px; min-height: 40px; font-size: 12px; }
+.backup-file-label { display: grid; gap: 10px; color: var(--text); font-size: 12px; }
+.backup-file-label input { width: 100%; min-width: 0; padding: 12px; border: 1px dashed var(--border-strong); border-radius: 9px; background: var(--field); color: var(--muted); }
+.backup-file-label input::file-selector-button { border: 1px solid var(--border-strong); background: var(--raised); color: var(--accent-ink); padding: 6px 9px; margin-right: 10px; border-radius: 5px; cursor: pointer; }
+.backup-dialog .backup-hint { font-size: 11px; }
+.backup-preview { margin: 18px 0; padding: 15px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); }
+.backup-preview p { font-size: 11px; overflow-wrap: anywhere; }
+.backup-preview dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 15px 0; }
+.backup-preview dl div { padding: 10px 6px; background: var(--raised); border-radius: 7px; text-align: center; }
+.backup-preview dt { color: var(--muted); font-size: 10px; }
+.backup-preview dd { color: var(--accent-ink); font-size: 19px; margin: 6px 0 0; }
+.backup-preview summary { cursor: pointer; color: var(--accent-ink); font-size: 12px; padding-block: 7px; }
+.backup-preview pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 180px; overflow-y: auto; padding: 10px; border-radius: 6px; background: var(--field); color: var(--text); font-size: 12px; }
+.backup-draft-tags { max-height: 180px; overflow-y: auto; padding-left: 22px; font-size: 12px; color: var(--text); overflow-wrap: anywhere; }
+.backup-draft-tags li { padding: 5px; }
+.backup-draft-tags span { color: var(--muted); padding-left: 8px; }
+.backup-options { border: 0; padding: 0; margin: 18px 0; display: grid; gap: 11px; }
+.backup-options legend { color: var(--text); font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+.backup-options label, .backup-confirm { display: flex; align-items: flex-start; gap: 8px; color: var(--text); font-size: 12px; line-height: 1.8; cursor: pointer; }
+.backup-dialog input[type=checkbox], .backup-dialog input[type=radio] { margin-top: 4px; flex-shrink: 0; accent-color: var(--accent); width: 15px; height: 15px; }
+.backup-options p { margin: -4px 0 0 23px; font-size: 11px; }
+.backup-result { padding: 12px; border: 1px solid var(--border); background: var(--accent-soft); color: var(--accent-ink); font-size: 12px; border-radius: 8px; line-height: 1.9; margin-bottom: 15px; }
+.backup-confirm { padding: 12px; border: 1px solid var(--border); background: var(--warning-bg); color: var(--warning); border-radius: 8px; margin-bottom: 15px; }
+.backup-dialog .backup-error { color: var(--danger); background: var(--danger-bg); border: 1px solid var(--border); padding: 12px; border-radius: 8px; }
+.backup-dialog .backup-message { color: var(--good); }
+.backup-footer { display: flex; justify-content: flex-end; border-top: 1px solid var(--border); margin-top: 20px; padding-top: 15px; }
+@media (max-width: 767px) {
+  .draft-history button { min-height: 40px; font-size: 12px; }
+  .draft-history > span { font-size: 10px; }
+  .backup-dialog { padding: 20px 16px; }
+  .backup-preview dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .backup-dialog .secondary-button, .backup-dialog .primary-button { min-height: 44px; }
+  .backup-options label, .backup-confirm { font-size: 13px; }
+  .backup-dialog input[type=checkbox], .backup-dialog input[type=radio] { width: 18px; height: 18px; }
+  .topbar-actions .save-status { font-size: 0; gap: 0; }
+  .topbar-actions .save-status svg { width: 16px; height: 16px; }
+}

@@ -1,0 +1,22 @@
+name: 错误反馈
+description: 报告无法正常使用的功能
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传真实私人Prompt、完整备份、浏览器资料或任何密钥。请用最小示例复现。
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤、预期行为与实际结果
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 浏览器、操作系统与项目版本
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: 最小示例或已去除私人内容的截图

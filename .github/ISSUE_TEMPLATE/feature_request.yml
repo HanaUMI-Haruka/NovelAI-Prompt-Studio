@@ -1,0 +1,13 @@
+name: 功能建议
+description: 分享你的使用场景和改进建议
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: 你希望完成什么，目前遇到什么困难？
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议的交互方式或替代方案
