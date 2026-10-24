@@ -1,6 +1,12 @@
-# AI Prompt Studio
+# NovelAI Prompt Studio
 
-用中文寻找绘画标签，点击组合成英文 Prompt，再复制到自己的生图工具。AI Prompt Studio 是一个离线优先的可视化提示词编辑器，提供本地双语词库、NovelAI 数值权重、收藏组合和个人标签库，无需账号或 API 密钥。
+用中文寻找绘画标签，点击组合成英文 Prompt，再复制到自己的生图工具。NovelAI Prompt Studio 是面向 NovelAI 用户的可视化绘画提示词编辑器，提供内置双语词库、逐标签权重、收藏组合和个人标签库，支持电脑与手机浏览器，无需登录或 API 密钥。
+
+**在线使用：[打开 NovelAI Prompt Studio](https://hanaumi-haruka.github.io/NovelAI-Prompt-Studio/)**。支持电脑和手机浏览器，无需安装开发工具。
+
+[项目仓库](https://github.com/HanaUMI-Haruka/NovelAI-Prompt-Studio) · [v0.1.0 源码下载与发布说明](https://github.com/HanaUMI-Haruka/NovelAI-Prompt-Studio/releases/tag/v0.1.0) · [问题反馈](https://github.com/HanaUMI-Haruka/NovelAI-Prompt-Studio/issues)
+
+在线版需要联网加载网页和词库；本地运行在首次安装依赖后可离线使用。个人数据保存在当前浏览器，不会自动跨设备同步；换设备或从本机切换到在线版，请先用“备份恢复”迁移数据。
 
 ## 项目能解决什么问题
 
@@ -31,9 +37,15 @@
 
 ## 安装或访问方法
 
+### 直接在线使用
+
+打开 [在线编辑器](https://hanaumi-haruka.github.io/NovelAI-Prompt-Studio/) 即可使用，电脑和手机均可访问，不需要 GitHub 账号或 Node.js。首次打开需要下载完整词库和排序索引，请等待“词库已就绪”。
+
+浏览器缓存不能替代完整离线支持。当前在线版没有可安装的 PWA 或离线缓存机制，断网后重新打开或刷新可能无法加载；需要可靠的离线使用时，请选择下方本地运行方式。
+
 ### 本地运行源码
 
-推荐安装 **Node.js 24 LTS**（包含 npm）；`package.json` 声明的最低版本为 Node.js 22.12。取得源码并解压后，在含有 `package.json` 的项目根目录打开终端：
+从 [Release](https://github.com/HanaUMI-Haruka/NovelAI-Prompt-Studio/releases/tag/v0.1.0) 下载 `Source code` 并解压，或克隆本仓库。源码不是安装包，也不能直接双击 HTML 运行。推荐安装 **Node.js 24 LTS**（包含 npm）；`package.json` 声明的最低版本为 Node.js 22.12。在含有 `package.json` 的项目根目录打开终端：
 
 ```sh
 npm ci
@@ -48,6 +60,8 @@ http://127.0.0.1:5173/
 
 端口被占用时 Vite 会选择其他端口，**以终端实际输出为准**。首次安装需要联网下载依赖；标签快照已经随源码提供，无需再抓取 Danbooru、运行 Python 或配置密钥。
 
+依赖准备完成后，本地运行不需要连接互联网，但本地服务需要保持运行。手机使用在线版最方便；手机也可以在同一局域网访问电脑提供的服务，需要另行配置监听地址和防火墙，默认 `127.0.0.1` 仅本机可访问。
+
 Windows 如果提示 `npm.ps1` 被执行策略阻止，可使用以下命令，无需调整系统执行策略：
 
 ```powershell
@@ -57,7 +71,7 @@ npm.cmd run dev
 
 ### 在线访问与静态部署
 
-目前没有提供已验证的公开演示网址，请先使用本地运行方式。仓库自带**手动触发**的 GitHub Pages 工作流；配置文件存在不代表网站已经上线。公开发布后，可把实际 Pages 地址提供给使用者直接访问。
+在线版本已部署到 [GitHub Pages](https://hanaumi-haruka.github.io/NovelAI-Prompt-Studio/)，可以直接在浏览器中使用。仓库自带**手动触发**的 GitHub Pages 工作流；后续更新代码后，需要重新运行 `Deploy GitHub Pages` 才会更新网站。
 
 需要部署时运行：
 
@@ -144,9 +158,9 @@ blurry, low quality
 
 ## 隐私与本地保存
 
-草稿、收藏夹、组合、个人标签和设置存于当前浏览器LocalStorage，不会由应用上传。在线访问仍会从托管服务器下载网页和词库，托管平台可能记录访问。第一次打开完整词库需下载约20MB标签JSON及排序索引。
+草稿、收藏夹、组合、个人标签和设置存于当前浏览器 LocalStorage，不会由应用上传。在线版由 GitHub Pages 提供，网页和词库加载会产生网络请求，托管平台可能记录访问。首次打开需下载约 20MB 标签 JSON，另有约 7.65MiB 排序索引及网页资源，实际传输量取决于压缩与缓存。
 
-清除站点数据、使用隐私窗口或更换浏览器可能丢失内容；换域名、协议或端口后，本地存储也不会自动迁移，请先导出备份。备份包含你的自定义内容，分享前请检查。复制失败时可手动选择输出文本复制；线上部署建议使用HTTPS。详见[隐私说明](docs/PRIVACY.md)。
+清除站点数据、使用隐私窗口或更换浏览器可能丢失内容；换域名、协议或端口后，本地存储也不会自动迁移，请先导出备份。本机预览与在线版的数据互不自动同步。备份包含你的自定义内容，分享前请检查。公开站点已启用 HTTPS；复制失败时可手动选择输出文本复制。详见[隐私说明](docs/PRIVACY.md)。
 
 ## 开发与验证
 
@@ -156,7 +170,7 @@ npm run build
 npm run release:check
 ```
 
-测试使用Vitest；构建执行TypeScript检查，生成运行依赖完整许可和排序资源，再输出网页。仓库提供Windows/Linux CI配置，实际运行结果需在对应仓库Actions中查看。参与贡献请阅读[贡献指南](CONTRIBUTING.md)，安全问题见[SECURITY.md](SECURITY.md)。
+测试使用 Vitest；构建执行 TypeScript 检查，生成运行依赖完整许可和排序资源，再输出网页。仓库运行 Windows/Linux CI；[Actions](https://github.com/HanaUMI-Haruka/NovelAI-Prompt-Studio/actions) 提供每次提交的实际结果。Pages 部署工作流也会运行测试与发布检查。参与贡献请阅读[贡献指南](CONTRIBUTING.md)，安全问题见[SECURITY.md](SECURITY.md)。
 
 技术栈：React 19、TypeScript 5.9、Vite 7、Tailwind CSS 3、Vitest 4、dnd-kit及Lucide。应用使用React状态和版本化LocalStorage，Prompt由结构化标签派生。
 

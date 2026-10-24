@@ -3,7 +3,7 @@ description: 报告无法正常使用的功能
 body:
   - type: markdown
     attributes:
-      value: 请勿上传真实私人Prompt、完整备份、浏览器资料或任何密钥。请用最小示例复现。
+      value: 请注明是在公开网站还是本地运行时遇到问题，并用最小示例复现。请勿上传真实私人 Prompt、完整备份、浏览器资料或任何密钥。
   - type: textarea
     id: steps
     attributes:
@@ -13,7 +13,7 @@ body:
   - type: input
     id: environment
     attributes:
-      label: 浏览器、操作系统与项目版本
+      label: 浏览器、操作系统、访问方式（在线/本地）与项目版本
     validations:
       required: true
   - type: textarea

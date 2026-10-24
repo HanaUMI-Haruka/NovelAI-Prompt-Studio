@@ -2,7 +2,7 @@
   "name": "ai-prompt-studio",
   "private": true,
   "version": "0.1.0",
-  "description": "Offline-first bilingual tag editor for English image prompts, with NovelAI weights and local collections.",
+  "description": "NovelAI Prompt Studio: a bilingual visual prompt editor with tag search, per-tag weights, reusable collections and browser-local storage for desktop and mobile.",
   "license": "MIT",
   "type": "module",
   "scripts": {
